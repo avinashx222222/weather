@@ -13,8 +13,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'image': "url('/src/components/media/background.jpg')",
-        'ima': "url('/src/components/media/google-calendar-background.jpg')",
-        'imag': "url('/src/components/media/images.jpg')"
+        'image': "url('/src/components/media/google-calendar-background.jpg')",
+        'image': "url('/src/components/media/images.jpg')",
+        'image': "url('/src/components/media/vecteezy_beautiful-blue-and-golden-sky-and-clouds-abstract_7773672.jpg')",
+        'image': "url('/src/components/media/weather.jpg')"
       }
     },
   },

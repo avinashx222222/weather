@@ -25,62 +25,65 @@ function Weather() {
 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[url('/src/components/media/images.jpg')] bg-cover bg-no-repeat p-4 " >
-      <div className="w-full max-w-md bg-white bg-opacity-50 backdrop-blur-lg rounded-3xl shadow-2xl p-6 text-black">
-        <h1 className="text-3xl font-extrabold text-center mb-5 tracking-wide">
-          ☁️ Weather  Application
+    <div className="bg-cover h-screen bg-[url('/src/components/media/vecteezy_beautiful-blue-and-golden-sky-and-clouds-abstract_7773672.jpg')] flex flex-col items-center justify-center p-4" >
+      <div className="w-full max-w-md bg-black/50 rounded-2xl shadow-2xl text-white p-5 backdrop-blur-xl">
+        <h1 className="text-4xl font-extrabold text-center mb-6">
+          🌎Weather
         </h1>
         <div className="flex flex-col gap-4">
           <input
             type="text"
             placeholder="Enter city name..."
-            className="p-3 rounded-tl-lg rounded-br-lg text-black font-semibold focus:outline-none shadow-inner bg-white"
-            value={city}
+            className="placeholder:italic placeholder:text-slate-400  block text-lg text-white w-full py-2 pl-9 pr-3  rounded-md p-2 font-semibold bg-transparent border-t border-b border-t-white border-b-neutral-800 focus:outline-none focus:border-t-white focus:border-b-neutral-800 focus:border-b-black focus:shadow-[1px_3px_9px_#00000020] hover:border-slate-400 transition duration-800 ease shadow-xl  "
+            // value={city}       
             onChange={(e) => {
               setCity(e.target.value);
             }}
             onKeyDown={(e) => e.key === "Enter" && handleData()}
           />
-          <button
-            className="bg-white text-indigo-600 font-semibold font-semibold py-2 rounded-tr-lg rounded-bl-lg hover:bg-indigo-100 
-          "
+        </div>
+        <div className="flex flex-col items-center justify-center mt-4">
+        <button
+            className="text-white bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] from-blue-500 via-blue-600 to-blue-700  hover:bg-gradient-to-br  focus:ring-black-300 dark:focus:ring-black-800 px-12 py-2 rounded-md font-semibold text-md"
             onClick={handleData}
           >
             🔎 Search City
           </button>
         </div>
+          
+        
 
         {error && <p className="text-blue-5000 text-lg mt-4 font-semibold text-center">{error}</p>}
 
         {weather && (
-          <div className="mt-6 text-center">
+          <div className="flex flex-col items-center justify-center mt-5">
             <img
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt="weather-icon"
-              className="mx-auto h-32 w-32 object-contain mb-4"
+              className="mx-auto h-30 object-contain"
             />
-            <h2 className="text-3xl font-bold">
+            <h2 className="md-4 text-2xl font-semibold">
               {weather.name}/{weather.sys.country}
             </h2>
-            <p className="text-xl capitalize">
+            <p className="mt-2 text-md font-medium">
               {weather.weather[0].description}
             </p>
-            <p className="text-5xl font-extrabold mt-2">
+            <p className="mt-2 text-2xl font-extrabold">
               {weather.main.temp}°C
             </p>
 
-            <div className="grid grid-cols-3 gap-2 mt-6 text-base text-black">
-              <div className="bg-white bg-opacity-60 rounded-xl p-2">
-                <p className="font-semibold">Humidity</p>
-                <p>{weather.main.humidity}%</p>
+            <div className="grid md:grid-cols-3 sm:grid-col-1 gap-1 md:gap-4 text-sm place-items-center mt-6  ">
+              <div className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 grid place-items-center">
+                <p className="text-white text-xs ">Humidity</p>
+                <p className="text-white text-xs">{weather.main.humidity}%</p>
               </div>
-              <div className="bg-white bg-opacity-60 rounded-xl p-2">
-                <p className="font-semibold">Wind</p>
-                <p>{weather.wind.speed} m/s</p>
+              <div className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 grid place-items-center">
+                <p className="text-white font-semibold ">Wind</p>
+                <p className="text-white text-xs">{weather.wind.speed} m/s</p>
               </div>
-              <div className="bg-white bg-opacity-60 rounded-xl p-2">
-                <p className="font-semibold">Clouds</p>
-                <p>{weather.clouds.all}%</p>
+              <div className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 grid place-items-center">
+                <p className="text-white font-semibold ">Clouds</p>
+                <p className="text-white text-xs">{weather.clouds.all}%</p>
               </div>
             </div>
           </div>
@@ -91,3 +94,4 @@ function Weather() {
 };
 
 export default Weather;
+

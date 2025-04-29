@@ -25,9 +25,9 @@ function Weather() {
 
 
   return (
-    <div className="bg-cover h-screen bg-[url('/src/components/media/vecteezy_beautiful-blue-and-golden-sky-and-clouds-abstract_7773672.jpg')] flex flex-col items-center justify-center p-4" >
-      <div className="w-full max-w-md bg-black/50 rounded-2xl shadow-2xl text-white p-5 backdrop-blur-xl">
-        <h1 className="text-4xl font-extrabold text-center mb-6">
+    <div className="bg-cover h-screen bg-[url('/src/components/media/vecteezy_beautiful-blue-and-golden-sky-and-clouds-abstract_7773672.jpg')] flex flex-col items-center justify-center p-4 " >
+      <div className="w-full max-w-md bg-black/50 rounded-2xl shadow-2xl text-white p-5 backdrop-blur-xl animate-pulse hover:animate-none">
+        <h1 className="text-5xl font-extrabold text-center mb-6">
           🌎Weather
         </h1>
         <div className="flex flex-col gap-4">
@@ -44,7 +44,7 @@ function Weather() {
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
         <button
-            className="text-white bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] from-blue-500 via-blue-600 to-blue-700  hover:bg-gradient-to-br  focus:ring-black-300 dark:focus:ring-black-800 px-12 py-2 rounded-md font-semibold text-md"
+            className="text-white bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] from-blue-500 via-blue-600 to-blue-700  hover:bg-gradient-to-br   focus:ring-black-300 dark:focus:ring-black-800 px-12 py-2 rounded-md font-semibold text-md"
             onClick={handleData}
           >
             🔎 Search City
@@ -83,7 +83,7 @@ function Weather() {
               </div>
               <div className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 grid place-items-center">
                 <p className="text-white font-semibold ">Clouds</p>
-                <p className="text-white text-xs">{weather.clouds.all}%</p>
+                <p className="text-white text-xs ">{weather.clouds.all}%</p>
               </div>
             </div>
           </div>

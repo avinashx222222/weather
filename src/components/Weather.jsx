@@ -44,7 +44,7 @@ function Weather() {
         </div>
         <div className="flex flex-col items-center justify-center mt-4 animate-none">
         <button
-            className="text-white bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] from-blue-500 via-blue-600 to-blue-700  hover:bg-gradient-to-br   focus:ring-black-300 dark:focus:ring-black-800 px-12 py-2 rounded-md font-semibold text-md"
+            className="text-white bg-[linear-gradient(110deg,#000103,40%,#1e2631,60%,#000103)] bg-[length:200%_100%] from-blue-500 via-blue-600 to-blue-700  hover:bg-gradient-to-br hover:scale-105 hover:shadow-md  focus:ring-black-300 dark:focus:ring-black-800 px-12 py-2 rounded-md font-semibold text-md"
             onClick={handleData}
           >
             🔎 Search City

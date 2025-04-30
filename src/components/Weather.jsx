@@ -26,7 +26,7 @@ function Weather() {
 
   return (
     <div className="bg-cover h-screen bg-[url('/src/components/media/vecteezy_beautiful-blue-and-golden-sky-and-clouds-abstract_7773672.jpg')] flex flex-col items-center justify-center p-4 " >
-      <div className="w-full max-w-md bg-black/50 rounded-2xl shadow-2xl text-white p-5 backdrop-blur-xl animate-pulse hover:animate-none">
+      <div className="w-full max-w-md bg-black/50 rounded-2xl shadow-2xl text-white p-5 backdrop-blur-xl animate-pulse backdrop-blur-sm animate-border-pulse border-2 hover:animate-none">
         <h1 className="text-5xl font-extrabold text-center mb-6 animate-none">
           🌎Weather
         </h1>
